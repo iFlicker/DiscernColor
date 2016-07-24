@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SquareView">
+        <attr name="Ccolor" format="color"></attr>
+        <attr name="Bcolor" format="color"></attr>
+    </declare-styleable>
+</resources>
