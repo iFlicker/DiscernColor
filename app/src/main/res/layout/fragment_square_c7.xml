@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:columnCount="7"
+    android:rowCount="7"
+    android:orientation="vertical">
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:id="@+id/c7_11"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="1"
+        android:id="@+id/c7_12"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="2"
+        android:id="@+id/c7_13"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="3"
+        android:id="@+id/c7_14"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="4"
+        android:id="@+id/c7_15"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="5"
+        android:id="@+id/c7_16"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="0"
+        android:layout_column="6"
+        android:id="@+id/c7_17"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:id="@+id/c7_21"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="1"
+        android:id="@+id/c7_22"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="2"
+        android:id="@+id/c7_23"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="3"
+        android:id="@+id/c7_24"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="4"
+        android:id="@+id/c7_25"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="5"
+        android:id="@+id/c7_26"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="6"
+        android:id="@+id/c7_27"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:id="@+id/c7_31"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="1"
+        android:id="@+id/c7_32"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="2"
+        android:id="@+id/c7_33"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="3"
+        android:id="@+id/c7_34"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="4"
+        android:id="@+id/c7_35"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="5"
+        android:id="@+id/c7_36"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="6"
+        android:id="@+id/c7_37"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="0"
+        android:id="@+id/c7_41"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="1"
+        android:id="@+id/c7_42"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="2"
+        android:id="@+id/c7_43"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="3"
+        android:id="@+id/c7_44"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="4"
+        android:id="@+id/c7_45"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="5"
+        android:id="@+id/c7_46"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="3"
+        android:layout_column="6"
+        android:id="@+id/c7_47"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="0"
+        android:id="@+id/c7_51"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="1"
+        android:id="@+id/c7_52"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="2"
+        android:id="@+id/c7_53"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="3"
+        android:id="@+id/c7_54"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="4"
+        android:id="@+id/c7_55"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="5"
+        android:id="@+id/c7_56"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="4"
+        android:layout_column="6"
+        android:id="@+id/c7_57"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="0"
+        android:id="@+id/c7_61"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="1"
+        android:id="@+id/c7_62"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="2"
+        android:id="@+id/c7_63"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="3"
+        android:id="@+id/c7_64"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="4"
+        android:id="@+id/c7_65"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="5"
+        android:id="@+id/c7_66"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="5"
+        android:layout_column="6"
+        android:id="@+id/c7_67"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="0"
+        android:id="@+id/c7_71"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="1"
+        android:id="@+id/c7_72"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="2"
+        android:id="@+id/c7_73"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="3"
+        android:id="@+id/c7_74"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="4"
+        android:id="@+id/c7_75"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="5"
+        android:id="@+id/c7_76"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+    <me.a0ff.discerncolor.ui.widget.SquareView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="6"
+        android:layout_column="6"
+        android:id="@+id/c7_77"
+        custom:Ccolor="#4ebcad"
+        custom:Bcolor="#FFFFFF"
+        custom:maxNumOfGrid="7" />
+
+
+</GridLayout>

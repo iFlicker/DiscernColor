@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <declare-styleable name="SquareView">
-        <attr name="Ccolor" format="color"></attr>
-        <attr name="Bcolor" format="color"></attr>
+        <attr name="Ccolor" format="color"></attr>         <!--主色-->
+        <attr name="Bcolor" format="color"></attr>         <!--背景色-->
+        <attr name="maxNumOfGrid" format="integer"></attr> <!--横向最大格子数-->
     </declare-styleable>
 </resources>

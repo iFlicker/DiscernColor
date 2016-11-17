@@ -9,6 +9,7 @@ import android.graphics.Paint;
 import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
 import android.view.View;
 
 import me.a0ff.discerncolor.R;
@@ -18,13 +19,13 @@ import me.a0ff.discerncolor.R;
  */
 public class SquareView extends View {
 
-    private int Ccolor;
-    private int Bcolor;
+    private int Ccolor;//主色
+    private int Bcolor;//背景色
+    private int maxNumOfGrid = 2;//横向最大格子数
 
-    private Paint mPaint;
-
-    private int h_view;
     private int w_view;
+    private int h_view;
+    private Paint mPaint;
 
     public SquareView(Context context) {
         this(context,null);
@@ -43,39 +44,81 @@ public class SquareView extends View {
         super(context, attrs, defStyleAttr, defStyleRes);
         TypedArray a = context.getTheme().
                 obtainStyledAttributes(attrs,R.styleable.SquareView,defStyleAttr,defStyleRes);
+
         Ccolor = a.getColor(R.styleable.SquareView_Ccolor,Color.BLACK);
         Bcolor = a.getColor(R.styleable.SquareView_Bcolor,Color.WHITE);
+        maxNumOfGrid = a.getInteger(R.styleable.SquareView_maxNumOfGrid,0);
+
         a.recycle();
 
         mPaint = new Paint();
-        mPaint.setAntiAlias(true);          //抗锯齿
-        mPaint.setColor(Ccolor);            //画笔颜色
-        mPaint.setStyle(Paint.Style.FILL);  //画笔风格
-        mPaint.setStrokeWidth(5);           //画笔粗细
-
+        mPaint.setAntiAlias(true);
+        mPaint.setColor(Ccolor);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
     }
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
+        int width = 0, height = 0;
+        int widthMode = MeasureSpec.getMode(widthMeasureSpec);
+        int widthSize = MeasureSpec.getSize(widthMeasureSpec);
+        int heightMode = MeasureSpec.getMode(heightMeasureSpec);
+        int heightSize = MeasureSpec.getSize(heightMeasureSpec);
 
-        h_view = MeasureSpec.getSize(heightMeasureSpec);
-        w_view = MeasureSpec.getSize(widthMeasureSpec);
+        switch (widthMode){
+            case MeasureSpec.AT_MOST:
+                width = getScreen("w");
+                break;
+            case MeasureSpec.EXACTLY:
+                width = widthSize;
+                break;
+            case MeasureSpec.UNSPECIFIED:
+                width = widthSize;
+                break;
+        }
+        switch (heightMode){
+            case MeasureSpec.AT_MOST:
+                height = getScreen("h");
+                break;
+            case MeasureSpec.EXACTLY:
+                height = heightSize;
+                break;
+            case MeasureSpec.UNSPECIFIED:
+                height = heightSize;
+                break;
+        }
 
+        w_view = width;
+        h_view = height;
+        //设置SquareView宽高
+        setMeasuredDimension(width/maxNumOfGrid,width/maxNumOfGrid);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-
         canvas.drawColor(Bcolor);
-
-        RectF r = new RectF(0,0,h_view,w_view);
-
-        canvas.drawRoundRect(r,100,100,mPaint);
+        //细节化圆角矩形
+        //TODO: 圆角参数搞定
+        float tmp = 3.17647059F;
+        int xtmp = (int)(w_view/2/maxNumOfGrid/tmp);
+        //TODO: 目前间距为2,略为奇怪,待细调
+        RectF r = new RectF( 2 , 2 , w_view/maxNumOfGrid - 2 , w_view/maxNumOfGrid - 2 );
+        canvas.drawRoundRect(r,xtmp,xtmp,mPaint);
 
     }
     public void setCcolor(int Cc){
         this.Ccolor = Cc;
+    }
+    public int getScreen(String c) {
+        DisplayMetrics dm = getResources().getDisplayMetrics();
+        if ( c.equals("w") ) {
+            return (int) dm.widthPixels;
+        } else if ( c.equals("h") ) {
+            return (int) dm.heightPixels;
+        }
+        return 0;
     }
 }

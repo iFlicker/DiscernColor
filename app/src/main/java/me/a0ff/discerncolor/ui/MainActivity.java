@@ -6,7 +6,6 @@ import android.os.Bundle;
 import me.a0ff.discerncolor.R;
 
 public class MainActivity extends AppCompatActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
