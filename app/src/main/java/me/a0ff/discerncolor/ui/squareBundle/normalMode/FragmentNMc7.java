@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import java.lang.reflect.Field;
+
 import me.a0ff.discerncolor.R;
 import me.a0ff.discerncolor.api.SquareFragmentBundle;
 import me.a0ff.discerncolor.ui.widget.SquareView;
@@ -65,5 +67,19 @@ public class FragmentNMc7 extends Fragment implements SquareFragmentBundle {
     @Override
     public void contrlView() {
 
+    }
+
+    @Override
+    public int getId(String sg) {
+        int ret = 0;
+        try {
+            Field f = R.id.class.getField(sg);
+            ret =  f.getInt(new android.R.id());
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        } catch (NoSuchFieldException e) {
+            e.printStackTrace();
+        }
+        return ret;
     }
 }

@@ -11,4 +11,6 @@ public interface SquareFragmentBundle {
     void clickView();
 
     void contrlView();
+
+    int getId(String sg);
 }

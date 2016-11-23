@@ -29,5 +29,5 @@
         android:layout_centerVertical="true"
         android:name="me.a0ff.discerncolor.ui.squareBundle.normalMode.FragmentNMc2"
         android:id="@+id/fnmc2"
-        tools:layout="@layout/fragment_square_c9" />
+        tools:layout="@layout/fragment_square_c2" />
 </RelativeLayout>
