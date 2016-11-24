@@ -1,7 +1,10 @@
 package me.a0ff.discerncolor.api;
 
 /**
- * Created by flicker on 16/11/21.
+ * Created with Android Studio.
+ * User: Flicker
+ * Date: 16/11/21
+ * Time: 上午00:30
  */
 
 public interface SquareFragmentBundle {
