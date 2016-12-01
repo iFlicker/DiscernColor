@@ -22,7 +22,7 @@ public class RandomColorBuilder {
 
     private Random rm = new Random();
     private static final int minC = 30;
-    private static final int maxC = 240;
+    private static final int maxC = 225;
     private int[] c2 ;
     private int[] c3 ;
     private int[] c4 ;
@@ -37,28 +37,28 @@ public class RandomColorBuilder {
         int target = 0;
         switch (i){
             case 2:
-                target = c2[rm.nextInt(i*i-1)];
+                target = c2[rm.nextInt(i*i)];
                 break;
             case 3:
-                target = c3[rm.nextInt(i*i-1)];
+                target = c3[rm.nextInt(i*i)];
                 break;
             case 4:
-                target = c4[rm.nextInt(i*i-1)];
+                target = c4[rm.nextInt(i*i)];
                 break;
             case 5:
-                target = c5[rm.nextInt(i*i-1)];
+                target = c5[rm.nextInt(i*i)];
                 break;
             case 6:
-                target = c6[rm.nextInt(i*i-1)];
+                target = c6[rm.nextInt(i*i)];
                 break;
             case 7:
-                target = c7[rm.nextInt(i*i-1)];
+                target = c7[rm.nextInt(i*i)];
                 break;
             case 8:
-                target = c8[rm.nextInt(i*i-1)];
+                target = c8[rm.nextInt(i*i)];
                 break;
             case 9:
-                target = c9[rm.nextInt(i*i-1)];
+                target = c9[rm.nextInt(i*i)];
                 break;
             default:
                 break;
@@ -66,10 +66,30 @@ public class RandomColorBuilder {
         return String.valueOf(target);
     }
 
-    //生成随机颜色数组,参数为色差大小
+    //生成随机颜色数组,参数为色差大小(建议5*)
     public String[] getRandomColor(int i){
         String tar[] = new String[2];
+        int ih[] = new int[3];
 
+        //生成 #(30~225)(30~225)(30~225) 随机颜色(10进制)
+        ih[0] = rm.nextInt(maxC-minC+1)+minC;
+        ih[1] = rm.nextInt(maxC-minC+1)+minC;
+        ih[2] = rm.nextInt(maxC-minC+1)+minC;
+
+        //生成众色 类#ffffff
+        tar[0] = "#"
+                + Integer.toHexString(ih[0])
+                + Integer.toHexString(ih[1])
+                + Integer.toHexString(ih[2]);
+
+        //生成独色 ,三位随机增减i
+        ih[0] = brP(ih[0],i);
+        ih[1] = brP(ih[1],i);
+        ih[2] = brP(ih[2],i);
+        tar[1] = "#"
+                + Integer.toHexString(ih[0])
+                + Integer.toHexString(ih[1])
+                + Integer.toHexString(ih[2]);
 
         return tar;
     }
@@ -104,6 +124,16 @@ public class RandomColorBuilder {
         System.arraycopy(a, 0, c, 0, a.length);
         System.arraycopy(b, 0, c, a.length, b.length);
         return c;
+    }
+
+    //三位随机增减,n为传入数值 i为增减值
+    private int brP(int n, int i){
+        if (rm.nextInt(2)==0){
+            n = n + i;
+        }else {
+            n = n - i;
+        }
+        return n;
     }
     //--------------------------------------------------------------------------------------------//
 
