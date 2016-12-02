@@ -10,6 +10,7 @@ import android.graphics.RectF;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.View;
 
 import me.a0ff.discerncolor.R;
@@ -22,6 +23,8 @@ public class SquareView extends View {
     private int Ccolor;//主色
     private int Bcolor;//背景色
     private int maxNumOfGrid = 2;//横向最大格子数
+
+    private Context context;
 
     private int w_view;
     private int h_view;
@@ -42,6 +45,7 @@ public class SquareView extends View {
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SquareView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
+        this.context = context;
         TypedArray a = context.getTheme().
                 obtainStyledAttributes(attrs,R.styleable.SquareView,defStyleAttr,defStyleRes);
 
@@ -51,11 +55,6 @@ public class SquareView extends View {
 
         a.recycle();
 
-        mPaint = new Paint();
-        mPaint.setAntiAlias(true);
-        mPaint.setColor(Ccolor);
-        mPaint.setStyle(Paint.Style.FILL);
-        mPaint.setStrokeWidth(3);
     }
 
     @Override
@@ -99,6 +98,11 @@ public class SquareView extends View {
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
+        mPaint = new Paint();
+        mPaint.setAntiAlias(true);
+        mPaint.setColor(Ccolor);
+        mPaint.setStyle(Paint.Style.FILL);
+        mPaint.setStrokeWidth(3);
         canvas.drawColor(Bcolor);
         //细节化圆角矩形
         //TODO: 圆角参数搞定
@@ -110,7 +114,9 @@ public class SquareView extends View {
 
     }
     public void setCcolor(int Cc){
-        this.Ccolor = Cc;
+        Ccolor = Cc;
+        Bcolor = Color.WHITE;
+        invalidate();
     }
     public int getScreen(String c) {
         DisplayMetrics dm = getResources().getDisplayMetrics();

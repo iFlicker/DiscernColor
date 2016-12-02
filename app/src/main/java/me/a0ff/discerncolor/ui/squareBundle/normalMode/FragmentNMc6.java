@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import java.lang.reflect.Field;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import me.a0ff.discerncolor.R;
 import me.a0ff.discerncolor.api.SquareFragmentBundle;
 import me.a0ff.discerncolor.ui.widget.SquareView;
@@ -19,7 +21,79 @@ import me.a0ff.discerncolor.ui.widget.SquareView;
 
 public class FragmentNMc6 extends Fragment implements SquareFragmentBundle {
 
-    private SquareView sq11;
+    @BindView(R.id.c6_11)
+    SquareView sq11;
+    @BindView(R.id.c6_12)
+    SquareView sq12;
+    @BindView(R.id.c6_13)
+    SquareView sq13;
+    @BindView(R.id.c6_14)
+    SquareView sq14;
+    @BindView(R.id.c6_15)
+    SquareView sq15;
+    @BindView(R.id.c6_16)
+    SquareView sq16;
+    @BindView(R.id.c6_21)
+    SquareView sq21;
+    @BindView(R.id.c6_22)
+    SquareView sq22;
+    @BindView(R.id.c6_23)
+    SquareView sq23;
+    @BindView(R.id.c6_24)
+    SquareView sq24;
+    @BindView(R.id.c6_25)
+    SquareView sq25;
+    @BindView(R.id.c6_26)
+    SquareView sq26;
+    @BindView(R.id.c6_31)
+    SquareView sq31;
+    @BindView(R.id.c6_32)
+    SquareView sq32;
+    @BindView(R.id.c6_33)
+    SquareView sq33;
+    @BindView(R.id.c6_34)
+    SquareView sq34;
+    @BindView(R.id.c6_35)
+    SquareView sq35;
+    @BindView(R.id.c6_36)
+    SquareView sq36;
+    @BindView(R.id.c6_41)
+    SquareView sq41;
+    @BindView(R.id.c6_42)
+    SquareView sq42;
+    @BindView(R.id.c6_43)
+    SquareView sq43;
+    @BindView(R.id.c6_44)
+    SquareView sq44;
+    @BindView(R.id.c6_45)
+    SquareView sq45;
+    @BindView(R.id.c6_46)
+    SquareView sq46;
+    @BindView(R.id.c6_51)
+    SquareView sq51;
+    @BindView(R.id.c6_52)
+    SquareView sq52;
+    @BindView(R.id.c6_53)
+    SquareView sq53;
+    @BindView(R.id.c6_54)
+    SquareView sq54;
+    @BindView(R.id.c6_55)
+    SquareView sq55;
+    @BindView(R.id.c6_56)
+    SquareView sq56;
+    @BindView(R.id.c6_61)
+    SquareView sq61;
+    @BindView(R.id.c6_62)
+    SquareView sq62;
+    @BindView(R.id.c6_63)
+    SquareView sq63;
+    @BindView(R.id.c6_64)
+    SquareView sq64;
+    @BindView(R.id.c6_65)
+    SquareView sq65;
+    @BindView(R.id.c6_66)
+    SquareView sq66;
+
     //TODO: go on 6
 
     public FragmentNMc6() {
@@ -38,6 +112,7 @@ public class FragmentNMc6 extends Fragment implements SquareFragmentBundle {
 
 
         View view = inflater.inflate(R.layout.fragment_square_c6, container, false);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -49,10 +124,9 @@ public class FragmentNMc6 extends Fragment implements SquareFragmentBundle {
 
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
     }
-
 
     @Override
     public void initView() {
@@ -74,7 +148,7 @@ public class FragmentNMc6 extends Fragment implements SquareFragmentBundle {
         int ret = 0;
         try {
             Field f = R.id.class.getField(sg);
-            ret =  f.getInt(new android.R.id());
+            ret = f.getInt(new android.R.id());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (NoSuchFieldException e) {

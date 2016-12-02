@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 
 import java.lang.reflect.Field;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.a0ff.discerncolor.R;
 import me.a0ff.discerncolor.api.SquareFragmentBundle;
 import me.a0ff.discerncolor.ui.widget.SquareView;
@@ -19,7 +22,26 @@ import me.a0ff.discerncolor.ui.widget.SquareView;
 
 public class FragmentNMc3 extends Fragment implements SquareFragmentBundle {
 
-    private SquareView sq11;
+    @BindView(R.id.c3_11)
+    SquareView sq11;
+    @BindView(R.id.c3_12)
+    SquareView sq12;
+    @BindView(R.id.c3_13)
+    SquareView sq13;
+    @BindView(R.id.c3_21)
+    SquareView sq21;
+    @BindView(R.id.c3_22)
+    SquareView sq22;
+    @BindView(R.id.c3_23)
+    SquareView sq23;
+    @BindView(R.id.c3_31)
+    SquareView sq31;
+    @BindView(R.id.c3_32)
+    SquareView sq32;
+    @BindView(R.id.c3_33)
+    SquareView sq33;
+    private Unbinder unbinder;
+
     //TODO: go on 3
 
     public FragmentNMc3() {
@@ -38,6 +60,7 @@ public class FragmentNMc3 extends Fragment implements SquareFragmentBundle {
 
 
         View view = inflater.inflate(R.layout.fragment_square_c3, container, false);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -49,10 +72,10 @@ public class FragmentNMc3 extends Fragment implements SquareFragmentBundle {
 
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
+        unbinder.unbind();
     }
-
 
     @Override
     public void initView() {
@@ -74,7 +97,7 @@ public class FragmentNMc3 extends Fragment implements SquareFragmentBundle {
         int ret = 0;
         try {
             Field f = R.id.class.getField(sg);
-            ret =  f.getInt(new android.R.id());
+            ret = f.getInt(new android.R.id());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (NoSuchFieldException e) {

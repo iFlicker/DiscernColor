@@ -16,7 +16,7 @@ import java.util.Random;
 
 public class RandomColorBuilder {
 
-    RandomColorBuilder(){
+    public RandomColorBuilder(){
         initArray();
     }
 
@@ -66,7 +66,8 @@ public class RandomColorBuilder {
         return String.valueOf(target);
     }
 
-    //生成随机颜色数组,参数为色差大小(建议5*)
+    //TODO:色差目前为三位分开浮动,预按需加参,两级难度调节
+    //生成随机颜色数组,参数为色差大小(建议5/10/15/20/25)
     public String[] getRandomColor(int i){
         String tar[] = new String[2];
         int ih[] = new int[3];
@@ -78,20 +79,27 @@ public class RandomColorBuilder {
 
         //生成众色 类#ffffff
         tar[0] = "#"
-                + Integer.toHexString(ih[0])
-                + Integer.toHexString(ih[1])
-                + Integer.toHexString(ih[2]);
+                + toHexStringP(ih[0])
+                + toHexStringP(ih[1])
+                + toHexStringP(ih[2]);
 
         //生成独色 ,三位随机增减i
         ih[0] = brP(ih[0],i);
         ih[1] = brP(ih[1],i);
         ih[2] = brP(ih[2],i);
         tar[1] = "#"
-                + Integer.toHexString(ih[0])
-                + Integer.toHexString(ih[1])
-                + Integer.toHexString(ih[2]);
+                + toHexStringP(ih[0])
+                + toHexStringP(ih[1])
+                + toHexStringP(ih[2]);
 
         return tar;
+    }
+    //转十六进制一位前自动补零
+    private String toHexStringP(int i){
+        String tmmp = String.valueOf(Integer.toHexString(i));
+        if (tmmp.length()==1)
+            tmmp = "0" + tmmp;
+        return tmmp;
     }
 
     //--------------------------------------------------------------------------------------------//

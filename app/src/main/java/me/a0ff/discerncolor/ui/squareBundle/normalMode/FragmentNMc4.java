@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import java.lang.reflect.Field;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
 import me.a0ff.discerncolor.R;
 import me.a0ff.discerncolor.api.SquareFragmentBundle;
 import me.a0ff.discerncolor.ui.widget.SquareView;
@@ -19,7 +21,38 @@ import me.a0ff.discerncolor.ui.widget.SquareView;
 
 public class FragmentNMc4 extends Fragment implements SquareFragmentBundle {
 
-    private SquareView sq11;
+    @BindView(R.id.c4_11)
+    SquareView sq11;
+    @BindView(R.id.c4_12)
+    SquareView sq12;
+    @BindView(R.id.c4_13)
+    SquareView sq13;
+    @BindView(R.id.c4_14)
+    SquareView sq14;
+    @BindView(R.id.c4_21)
+    SquareView sq21;
+    @BindView(R.id.c4_22)
+    SquareView sq22;
+    @BindView(R.id.c4_23)
+    SquareView sq23;
+    @BindView(R.id.c4_24)
+    SquareView sq24;
+    @BindView(R.id.c4_31)
+    SquareView sq31;
+    @BindView(R.id.c4_32)
+    SquareView sq32;
+    @BindView(R.id.c4_33)
+    SquareView sq33;
+    @BindView(R.id.c4_34)
+    SquareView sq34;
+    @BindView(R.id.c4_41)
+    SquareView sq41;
+    @BindView(R.id.c4_42)
+    SquareView sq42;
+    @BindView(R.id.c4_43)
+    SquareView sq43;
+    @BindView(R.id.c4_44)
+    SquareView sq44;
     //TODO: go on 4
 
     public FragmentNMc4() {
@@ -38,6 +71,7 @@ public class FragmentNMc4 extends Fragment implements SquareFragmentBundle {
 
 
         View view = inflater.inflate(R.layout.fragment_square_c4, container, false);
+        ButterKnife.bind(this, view);
         return view;
     }
 
@@ -49,10 +83,9 @@ public class FragmentNMc4 extends Fragment implements SquareFragmentBundle {
 
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
     }
-
 
     @Override
     public void initView() {
@@ -74,7 +107,7 @@ public class FragmentNMc4 extends Fragment implements SquareFragmentBundle {
         int ret = 0;
         try {
             Field f = R.id.class.getField(sg);
-            ret =  f.getInt(new android.R.id());
+            ret = f.getInt(new android.R.id());
         } catch (IllegalAccessException e) {
             e.printStackTrace();
         } catch (NoSuchFieldException e) {
