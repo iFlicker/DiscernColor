@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.View;
 
 import me.a0ff.discerncolor.R;
+import me.a0ff.discerncolor.util.RandomColorBuilder;
 
 /**
  * Created by flicker on 16/7/24.
@@ -54,7 +55,6 @@ public class SquareView extends View {
         maxNumOfGrid = a.getInteger(R.styleable.SquareView_maxNumOfGrid,0);
 
         a.recycle();
-
     }
 
     @Override

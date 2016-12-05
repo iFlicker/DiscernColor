@@ -4,7 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import me.a0ff.discerncolor.R;
-import me.a0ff.discerncolor.ui.squareBundle.normalMode.FragmentNMc2;
 
 public class MainActivity extends AppCompatActivity {
     @Override

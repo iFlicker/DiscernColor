@@ -10,24 +10,17 @@
     android:paddingTop="0dp"
     tools:context=".ui.MainActivity">
 
-    <!--<TextView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:id="@+id/tx1"-->
-        <!--android:text="Hello World!" />-->
-    <!--<me.a0ff.discerncolor.ui.widget.SquareView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--custom:Bcolor="#bfc9d2"-->
-        <!--custom:Ccolor="#246cb4"-->
-        <!--custom:maxNumOfGrid="2"-->
-        <!--android:layout_below="@+id/tx1"/>-->
     <fragment
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
-        android:name="me.a0ff.discerncolor.ui.squareBundle.normalMode.FragmentNMc2"
-        android:id="@+id/fnmc2"
-        tools:layout="@layout/fragment_square_c2" />
+        android:name="me.a0ff.discerncolor.ui.squareBundle.normalMode.FragmentNMc9"
+        android:id="@+id/fnmc9"
+        tools:layout="@layout/fragment_square_c9" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <!--  fragment容器  暂定-->
+    </FrameLayout>
 </RelativeLayout>

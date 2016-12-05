@@ -4,7 +4,6 @@ import android.app.Fragment;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,6 +15,7 @@ import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.Unbinder;
 import me.a0ff.discerncolor.R;
 import me.a0ff.discerncolor.api.SquareFragmentBundle;
 import me.a0ff.discerncolor.ui.widget.SquareView;
@@ -36,17 +36,14 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
     @BindView(R.id.c2_22)
     SquareView sq22;
 
+    Unbinder unbinder;
     private Map<String, SquareView> sfm = new HashMap<>();
     private RandomColorBuilder rcb = new RandomColorBuilder();
 
     private final String current = "c2_";
-    private int baseint = 2;      //2*2
+    private final int baseint = 2;      //2*2
     private String target;        //随机目标tmp
 
-//    private SquareView sq11;
-//    private SquareView sq12;
-//    private SquareView sq21;
-//    private SquareView sq22;
 
     public FragmentNMc2() {
         super();
@@ -72,8 +69,6 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-
-
         initView();
         contrlView();
         clickView();
@@ -83,15 +78,11 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
     @Override
     public void onDestroyView() {
         super.onDestroyView();
+        unbinder.unbind();
     }
 
     @Override
     public void initView() {
-
-//        sq11 = (SquareView) getView().findViewById(R.id.c2_11);
-//        sq12 = (SquareView) getView().findViewById(R.id.c2_12);
-//        sq21 = (SquareView) getView().findViewById(R.id.c2_21);
-//        sq22 = (SquareView) getView().findViewById(R.id.c2_22);
 
         sfm.put("sq11", sq11);
         sfm.put("sq12", sq12);
@@ -103,13 +94,12 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
     @Override
     public void contrlView() {
         // 妥了
-        String[] tmp = rcb.getRandomColor(25);  //色差
+        String[] tmp = rcb.getRandomColor(10);  //色差
         target = rcb.getRandomTarget(baseint);
-        Log.i("Colorr",tmp[0]);
-        Log.i("Colorr",tmp[1]);
-        for (Map.Entry<String, SquareView> entry : sfm.entrySet()) {
+
+        for (Map.Entry<String, SquareView> entry : sfm.entrySet())
             entry.getValue().setCcolor(Color.parseColor(tmp[0]));
-        }
+
         sfm.get("sq" + target).setCcolor(Color.parseColor(tmp[1]));
 
     }
@@ -117,9 +107,9 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
     @Override
     public void clickView() {
 
-        for (Map.Entry<String, SquareView> entry : sfm.entrySet()) {
+        for (Map.Entry<String, SquareView> entry : sfm.entrySet())
             entry.getValue().setOnClickListener(new SquareViewClickListener());
-        }
+
     }
 
     public int getId(String sg) {
@@ -140,7 +130,7 @@ public class FragmentNMc2 extends Fragment implements SquareFragmentBundle {
         public void onClick(View v) {
 
             if (v.getId() == getId(current + target)) {
-                Toast.makeText(getContext(), "成功击中目标aaaaaaaaaaa", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "成功击中目标", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(getContext(), "未击中目标", Toast.LENGTH_SHORT).show();
             }
