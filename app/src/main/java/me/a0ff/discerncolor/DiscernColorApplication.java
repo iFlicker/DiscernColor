@@ -11,21 +11,5 @@ import android.util.DisplayMetrics;
  */
 
 public class DiscernColorApplication extends Application {
-    private int screenWidth;
 
-
-    public DiscernColorApplication(){
-
-    }
-
-    @Override
-    public void onCreate() {
-        super.onCreate();
-    }
-
-    //暂停Dialog宽属性
-    public int getScreeenWidth(){
-        DisplayMetrics dm = getResources().getDisplayMetrics();
-        return dm.widthPixels;
-    }
 }
